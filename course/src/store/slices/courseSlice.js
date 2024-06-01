@@ -17,8 +17,19 @@ const courseSlice = createSlice({
         });
     },
 
+    searchCourse(state, action){
+      state.search = action.payload;
+    },
+    
+    deleteCourse(state, action){
+      const updatedData = state.data.filter((course)=>{
+        return course.id !== action.payload;
+      })
+
+      state.data = updatedData;
+    }
   },
 });
 
-export const {addCourse} = courseSlice.actions;
+export const {addCourse, deleteCourse, searchCourse} = courseSlice.actions;
 export const courseReducer = courseSlice.reducer;
