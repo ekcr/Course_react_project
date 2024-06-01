@@ -6,8 +6,15 @@ import '../styles/courseList.css'
 export default function CourseList() {
   const dispatch = useDispatch();
 
-  const courses = useSelector((state) => {
-    return state.courses.data;
+  const {courses} = useSelector(({forms, courses:{search, data}}) => {
+    const filteredData = data.filter((course)=>
+      course.name.toLowerCase().includes(search.toLowerCase())
+    );
+
+    return {
+      courses:filteredData
+    };
+
   });
 
   const renderedCourse = courses.map((course) => {

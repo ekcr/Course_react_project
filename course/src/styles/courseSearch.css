@@ -1,0 +1,22 @@
+.courseSearch{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.courseSearch .search{
+    display: flex;
+    align-items: center;
+}
+
+.courseSearch .search.label{
+    margin-right: 20px;
+    margin-bottom: 0px !important;
+}
+
+.courseSearch h3.title{
+    margin-bottom: 0px;
+}
+
+

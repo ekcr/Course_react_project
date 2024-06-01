@@ -22,7 +22,7 @@ export default function CourseForm() {
 
   return (
     <div className="courseForm panel">
-      <h4 className="subtitle is-4">Kurs Ekle</h4>
+      <h4 className="subtitle is-4">Add Course</h4>
       <form onSubmit={handleSubmit}>
         <div className='field-group'>
           <div className="field">
